@@ -1,0 +1,18 @@
+{
+  "app.name": "প্রথম আলাপ",
+  "nav.discover": "খুঁজুন",
+  "nav.saved": "সংরক্ষিত",
+  "nav.notifications": "বিজ্ঞপ্তি",
+  "nav.account": "অ্যাকাউন্ট",
+  "cta.getStarted": "শুরু করুন",
+  "cta.signIn": "সাইন ইন",
+  "cta.signUp": "অ্যাকাউন্ট তৈরি",
+  "cta.viewProfile": "প্রোফাইল দেখুন",
+  "cta.unlock": "মেসেজ আনলক",
+  "cta.favourite": "প্রিয় তালিকায়",
+  "cta.share": "শেয়ার",
+  "plan.free": "ফ্রি",
+  "plan.adFree": "অ্যাড-ফ্রি",
+  "plan.explorer": "এক্সপ্লোরার",
+  "common.loading": "লোড হচ্ছে…"
+}

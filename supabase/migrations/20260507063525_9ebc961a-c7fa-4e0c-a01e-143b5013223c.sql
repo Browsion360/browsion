@@ -1,0 +1,2 @@
+REVOKE EXECUTE ON FUNCTION public.generate_profile_slug(TEXT, TEXT, INTEGER, UUID) FROM PUBLIC, anon, authenticated;
+REVOKE EXECUTE ON FUNCTION public.patri_profiles_set_slug() FROM PUBLIC, anon, authenticated;

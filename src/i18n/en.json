@@ -1,0 +1,18 @@
+{
+  "app.name": "ProthomAlap",
+  "nav.discover": "Discover",
+  "nav.saved": "Saved",
+  "nav.notifications": "Alerts",
+  "nav.account": "Account",
+  "cta.getStarted": "Get started",
+  "cta.signIn": "Sign in",
+  "cta.signUp": "Create account",
+  "cta.viewProfile": "View profile",
+  "cta.unlock": "Unlock & message",
+  "cta.favourite": "Favourite",
+  "cta.share": "Share",
+  "plan.free": "Free",
+  "plan.adFree": "Ad-Free",
+  "plan.explorer": "Explorer",
+  "common.loading": "Loading…"
+}
