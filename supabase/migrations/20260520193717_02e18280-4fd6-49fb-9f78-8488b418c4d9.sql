@@ -1,0 +1,1 @@
+UPDATE public.cta_links SET is_active = true;
