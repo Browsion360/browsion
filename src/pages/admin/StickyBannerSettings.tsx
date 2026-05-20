@@ -30,7 +30,7 @@ export function StickyBannerSettings() {
     setSaving(true);
     const { error } = await supabase
       .from("app_settings")
-      .upsert({ key: "sticky_banner", value: cfg as any }, { onConflict: "key" });
+      .upsert({ key: "sticky_banner", value: cfg as any, is_public: true }, { onConflict: "key" });
     setSaving(false);
     if (error) return toast.error(error.message);
     toast.success("Sticky banner settings saved");
