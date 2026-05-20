@@ -352,7 +352,7 @@ const Landing = ({ region: regionSlug = "bd" }: { region?: Region }) => {
       <div className="container hidden py-6 md:block"><AdBanner size="468x60" /></div>
 
       <footer className={`border-t border-border/60 py-8 text-center text-sm text-muted-foreground ${bnClass}`}>
-        © {new Date().getFullYear()} ProthomAlap · {region.cta.footerNote}
+        © {new Date().getFullYear()} Browsion · {region.cta.footerNote}
       </footer>
 
       <AdSocialBar />
