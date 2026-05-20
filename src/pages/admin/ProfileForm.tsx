@@ -167,6 +167,18 @@ const ProfileForm = () => {
           <div className="flex items-center gap-3"><Switch checked={f.is_published} onCheckedChange={v => upd("is_published", v)} /> <span className="text-sm text-muted-foreground">Visible to users</span></div>
         </Field>
       </div>
+
+      {editing && (
+        <div className="mt-6 rounded-3xl border border-border bg-card p-6">
+          <h2 className="font-display text-xl font-bold">Contact links (this profile only)</h2>
+          <p className="mt-1 text-xs text-muted-foreground">
+            Per-profile overrides — these numbers/links will show only on this profile and override the global defaults.
+          </p>
+          <div className="mt-4">
+            <ProfileCtaEditor profileId={id!} />
+          </div>
+        </div>
+      )}
       <div className="mt-6 flex gap-2">
         <Button variant="outline" onClick={() => navigate("/admin/dashboard")}>Cancel</Button>
         <Button disabled={busy} onClick={save} className="gradient-rose text-primary-foreground">{editing ? "Save changes" : "Create profile"}</Button>
