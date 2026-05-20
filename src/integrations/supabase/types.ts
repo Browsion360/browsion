@@ -487,6 +487,7 @@ export type Database = {
       [_ in never]: never
     }
     Functions: {
+      bn_to_latin: { Args: { _s: string }; Returns: string }
       generate_profile_slug: {
         Args: { _age: number; _district: string; _id: string; _name: string }
         Returns: string
