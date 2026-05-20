@@ -12,6 +12,7 @@ import { DISTRICTS } from "@/lib/format";
 import { REGIONS, REGION_LIST, getRegion } from "@/lib/regions";
 import { toast } from "sonner";
 import { X } from "lucide-react";
+import { ProfileCtaEditor } from "@/components/admin/ProfileCtaEditor";
 
 const empty = {
   name: "", age: 25, height_cm: null as number | null, weight_kg: null as number | null, skin_tone: "" as any,
