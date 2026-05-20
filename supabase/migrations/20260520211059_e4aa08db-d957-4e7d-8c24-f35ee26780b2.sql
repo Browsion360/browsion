@@ -1,0 +1,1 @@
+ALTER TYPE public.cta_kind ADD VALUE IF NOT EXISTS 'telegram';
