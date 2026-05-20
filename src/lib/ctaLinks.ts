@@ -4,8 +4,9 @@ import imoIcon from "@/assets/cta/imo.png";
 import msgrIcon from "@/assets/cta/messenger.png";
 import fbIcon from "@/assets/cta/facebook.png";
 import callIcon from "@/assets/cta/call.png";
+import tgIcon from "@/assets/cta/telegram.png";
 
-export type CtaKind = "whatsapp" | "imo" | "messenger" | "facebook" | "call" | "custom";
+export type CtaKind = "whatsapp" | "telegram" | "imo" | "messenger" | "facebook" | "call" | "custom";
 
 export type CtaLink = {
   id: string;
@@ -17,10 +18,11 @@ export type CtaLink = {
   sort_order: number;
 };
 
-export const CTA_KINDS: CtaKind[] = ["whatsapp", "imo", "messenger", "facebook", "call"];
+export const CTA_KINDS: CtaKind[] = ["whatsapp", "telegram", "imo", "messenger", "facebook", "call"];
 
 export const CTA_META: Record<CtaKind, { icon: string; bg: string; defaultLabel: string }> = {
   whatsapp: { icon: waIcon, bg: "#25D366", defaultLabel: "WhatsApp নাম্বার দেখুন" },
+  telegram: { icon: tgIcon, bg: "#229ED9", defaultLabel: "Telegram এ মেসেজ" },
   imo: { icon: imoIcon, bg: "#1F4FA0", defaultLabel: "Imo তে কথা বলুন" },
   messenger: { icon: msgrIcon, bg: "#0084FF", defaultLabel: "Messenger এ মেসেজ" },
   facebook: { icon: fbIcon, bg: "#1877F2", defaultLabel: "Facebook এ Add দিন" },
@@ -61,7 +63,7 @@ export async function resolveCtaLinks(profileId?: string | null): Promise<CtaLin
   return Array.from(byKind.values()).sort((a, b) => a.sort_order - b.sort_order);
 }
 
-const PRIMARY_PRIORITY: CtaKind[] = ["whatsapp", "call", "imo", "messenger", "facebook", "custom"];
+const PRIMARY_PRIORITY: CtaKind[] = ["whatsapp", "telegram", "call", "imo", "messenger", "facebook", "custom"];
 
 export function pickPrimary(links: CtaLink[]): { primary: CtaLink | null; secondary: CtaLink[]; hasOverride: boolean } {
   if (!links.length) return { primary: null, secondary: [], hasOverride: false };

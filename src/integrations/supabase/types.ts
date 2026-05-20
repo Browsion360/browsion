@@ -509,6 +509,7 @@ export type Database = {
         | "facebook"
         | "call"
         | "custom"
+        | "telegram"
       family_type: "nuclear" | "joint"
       marital_status: "never" | "divorced" | "widowed"
       payment_status: "pending" | "approved" | "rejected"
@@ -642,7 +643,15 @@ export const Constants = {
   public: {
     Enums: {
       app_role: ["admin", "user"],
-      cta_kind: ["whatsapp", "imo", "messenger", "facebook", "call", "custom"],
+      cta_kind: [
+        "whatsapp",
+        "imo",
+        "messenger",
+        "facebook",
+        "call",
+        "custom",
+        "telegram",
+      ],
       family_type: ["nuclear", "joint"],
       marital_status: ["never", "divorced", "widowed"],
       payment_status: ["pending", "approved", "rejected"],
