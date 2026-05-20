@@ -63,7 +63,7 @@ export async function resolveCtaLinks(profileId?: string | null): Promise<CtaLin
   return Array.from(byKind.values()).sort((a, b) => a.sort_order - b.sort_order);
 }
 
-const PRIMARY_PRIORITY: CtaKind[] = ["whatsapp", "call", "imo", "messenger", "facebook", "custom"];
+const PRIMARY_PRIORITY: CtaKind[] = ["whatsapp", "telegram", "call", "imo", "messenger", "facebook", "custom"];
 
 export function pickPrimary(links: CtaLink[]): { primary: CtaLink | null; secondary: CtaLink[]; hasOverride: boolean } {
   if (!links.length) return { primary: null, secondary: [], hasOverride: false };
