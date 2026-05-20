@@ -4,8 +4,9 @@ import imoIcon from "@/assets/cta/imo.png";
 import msgrIcon from "@/assets/cta/messenger.png";
 import fbIcon from "@/assets/cta/facebook.png";
 import callIcon from "@/assets/cta/call.png";
+import tgIcon from "@/assets/cta/telegram.png";
 
-export type CtaKind = "whatsapp" | "imo" | "messenger" | "facebook" | "call" | "custom";
+export type CtaKind = "whatsapp" | "telegram" | "imo" | "messenger" | "facebook" | "call" | "custom";
 
 export type CtaLink = {
   id: string;
