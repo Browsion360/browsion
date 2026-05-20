@@ -9,8 +9,8 @@ export function Logo({ className = "" }: { className?: string }) {
         </svg>
       </span>
       <span>
-        <span className="text-gradient">Brow</span>
-        <span className="text-foreground">sion</span>
+        <span className="text-gradient">Brows</span>
+        <span className="text-foreground">ion</span>
       </span>
     </Link>
   );
