@@ -101,7 +101,7 @@ const Landing = ({ region: regionSlug = "bd" }: { region?: Region }) => {
           <div className="flex items-center gap-2">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="gap-1.5">
+                <Button variant="ghost" size="sm" className="gap-1.5" aria-label={`Change region (current: ${region.label})`}>
                   <span aria-hidden>{region.flag}</span>
                   <span className="hidden sm:inline">{region.label}</span>
                   <Globe className="h-3.5 w-3.5 opacity-60" />

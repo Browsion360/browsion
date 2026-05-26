@@ -183,8 +183,11 @@ const Discover = () => {
           <ProfileGridSkeleton count={6} />
         </section>
       ) : (
-        <section className="mt-6 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {items}
+        <section className="mt-6" aria-labelledby="discover-grid-heading">
+          <h2 id="discover-grid-heading" className="sr-only">Profiles</h2>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            {items}
+          </div>
         </section>
       )}
 

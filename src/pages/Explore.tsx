@@ -224,10 +224,10 @@ const Explore = () => {
               <div className="shimmer-overlay" />
               {photos.length > 1 && (
                 <>
-                  <button onClick={() => setPhotoIdx((i) => Math.max(0, i - 1))} className="absolute left-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-background/80 backdrop-blur-md hover:scale-110">
+                  <button aria-label="Previous photo" onClick={() => setPhotoIdx((i) => Math.max(0, i - 1))} className="absolute left-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-background/80 backdrop-blur-md hover:scale-110">
                     <ChevronLeft className="h-5 w-5" />
                   </button>
-                  <button onClick={() => setPhotoIdx((i) => Math.min(photos.length - 1, i + 1))} className="absolute right-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-background/80 backdrop-blur-md hover:scale-110">
+                  <button aria-label="Next photo" onClick={() => setPhotoIdx((i) => Math.min(photos.length - 1, i + 1))} className="absolute right-3 top-1/2 grid h-10 w-10 -translate-y-1/2 place-items-center rounded-full bg-background/80 backdrop-blur-md hover:scale-110">
                     <ChevronRight className="h-5 w-5" />
                   </button>
                 </>
@@ -244,7 +244,7 @@ const Explore = () => {
             {photos.length > 1 && (
               <div className="mt-3 flex gap-2 overflow-x-auto">
                 {photos.map((p, i) => (
-                  <button key={i} onClick={() => setPhotoIdx(i)} className={`aspect-square w-16 shrink-0 overflow-hidden rounded-xl border-2 ${i === photoIdx ? "border-primary" : "border-transparent"}`}>
+                  <button key={i} aria-label={`View photo ${i + 1} of ${photos.length}`} aria-current={i === photoIdx} onClick={() => setPhotoIdx(i)} className={`aspect-square w-16 shrink-0 overflow-hidden rounded-xl border-2 ${i === photoIdx ? "border-primary" : "border-transparent"}`}>
                     <img src={photoUrl(p)!} className="h-full w-full object-cover" alt="" />
                   </button>
                 ))}
