@@ -168,7 +168,7 @@ const ProfileDetail = () => {
           {photos.length > 1 && (
             <div className="mt-3 flex gap-2">
               {photos.map((p, i) => (
-                <button key={i} onClick={() => setPhotoIdx(i)} className={`aspect-square w-16 overflow-hidden rounded-xl border-2 ${i === photoIdx ? "border-primary" : "border-transparent"}`}>
+                <button key={i} aria-label={`View photo ${i + 1} of ${photos.length}`} aria-current={i === photoIdx} onClick={() => setPhotoIdx(i)} className={`aspect-square w-16 overflow-hidden rounded-xl border-2 ${i === photoIdx ? "border-primary" : "border-transparent"}`}>
                   <img src={photoUrl(p)!} className={`h-full w-full object-cover ${blur ? "blur-photo" : ""}`} alt="" />
                 </button>
               ))}

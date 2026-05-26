@@ -49,7 +49,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             )}
             {user ? (
               <>
-                <Link to="/notifications" className="relative grid h-10 w-10 place-items-center rounded-full hover:bg-secondary">
+                <Link to="/notifications" aria-label={unread > 0 ? `Notifications (${unread} unread)` : "Notifications"} className="relative grid h-10 w-10 place-items-center rounded-full hover:bg-secondary">
                   <Bell className="h-5 w-5" />
                   {unread > 0 && (
                     <span className="absolute right-1 top-1 grid h-4 min-w-4 place-items-center rounded-full bg-primary px-1 text-[10px] font-semibold text-primary-foreground">
